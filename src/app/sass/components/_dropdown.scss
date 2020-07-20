@@ -1,0 +1,20 @@
+.form-drop_down
+{
+	
+		height: 3.5rem; 
+}
+// select{  
+// option:hover{
+// 	background-color: $color-primary!important
+// 	colo
+// }
+// }
+// option:hover {
+// 	color: #444645 !important;
+// 	background: #ddd !important;
+// 	}
+select>option:hover
+{
+		background-color: #1B517E !important;
+		cursor: pointer !important;
+}

@@ -1,0 +1,56 @@
+.form-body
+{
+	background-color: $color-white;
+}
+
+.custom-form{
+	background-color:#f3f0f0;
+  height: auto;
+		margin: 2rem 0;
+	border: .1rem grey solid; 
+	border-top: .5rem $color-primary solid;
+	border-radius: 1rem;
+	padding: 1.6rem;
+} 
+#add-animal-form
+{
+	padding: .6rem;
+	margin: 1rem 0;
+}
+
+.form-title
+{
+	color:$color-primary;
+	margin: auto;
+	font-family: inherit; 
+}
+
+.form-left-side
+{
+	color: $color-white;
+	border-radius: 1rem;
+	// margin-left: 1.9rem;
+	background-color: rgb(148, 193, 61);
+}
+.gender-field,.is-to-sail-field
+{
+	border: .11rem solid $color-primary;
+	border-radius: 2.75rem;
+	height: 13rem; 
+	display: flex;
+	flex-direction: column;
+	margin-left: 0;
+	margin-right: 0;
+	margin: .5rem;
+	width: 95%;
+	padding: .8rem;
+	form-check 
+	{
+	    padding-bottom: 1.2rem;
+	}
+}
+#button--cancel 
+{
+	background-color: black;
+	border-color: black;
+}
