@@ -1,8 +1,40 @@
-.nav-cont{
-a{
-    color:black !important;
-    &:hover{
-        color:$color-primary !important;
-    }
+
+.horizontal-list{
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+justify-self: center;
 }
+
+.nav-item{
+	text-decoration: none;
+		font-size: 1.7rem;
+		color: #262626;
+		line-height: 2rem;
+		font-weight: 600;
+		list-style: none;
+	// & a{
+	// 	text-decoration: none;
+	// 	font-size: 1.7rem;
+	// 	color: #262626;
+	// 	line-height: 2rem;
+	// 	font-weight: 600;
+		
+	// }
+}
+.nav-item{
+	margin-left: 3rem;
+	margin-right: 3rem;
+	& a:hover{
+		color: $color-orange-primary;
+	
+	}
+	&:hover{
+		color: $color-orange-primary;
+	
+	}
+}
+
+.nav-bar{
+	margin: 0.1 rem 0;
 }
