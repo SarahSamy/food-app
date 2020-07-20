@@ -10,7 +10,6 @@ justify-self: center;
 	text-decoration: none;
 		font-size: 1.7rem;
 		color: #262626;
-		line-height: 2rem;
 		font-weight: 600;
 		list-style: none;
 	// & a{
@@ -23,8 +22,6 @@ justify-self: center;
 	// }
 }
 .nav-item{
-	margin-left: 3rem;
-	margin-right: 3rem;
 	& a:hover{
 		color: $color-orange-primary;
 	
@@ -35,6 +32,10 @@ justify-self: center;
 	}
 }
 
-.nav-bar{
-	margin: 0.1 rem 0;
+.logo{
+	font-family: 'Pacifico', cursive;
+	 font-size: 3.5rem;
+	 color: $color-orange-primary;
+	 
+	
 }
