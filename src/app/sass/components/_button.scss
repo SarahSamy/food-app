@@ -1,0 +1,25 @@
+.btn {
+    border-radius: 5rem;
+    text-transform: capitalize;
+    transition: all 0.25s ease-in-out;
+    padding: 0 0.3rem;
+    font-size: 1.5rem;
+    min-width: 10rem;
+    text-align: center;
+    line-height: 3.3rem;
+    cursor: pointer;
+
+&--primary {
+    background-color: $color-orange-primary;
+    color: #fff;
+    // border: 1px solid transparent;
+    // border: 0.09rem solid $color-orange-primary;
+    // border-radius: 5rem;
+    color: $color-white;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: $color-orange-light;
+        color: $color-white;
+        
+    }
+}}
