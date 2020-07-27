@@ -10,6 +10,7 @@ import { BasicSliderComponent } from './shared/basic-slider/basic-slider.compone
 import { HomeComponent } from './features/pages/home/home.component';
 import { MovingInPathComponent } from './features/animation/moving-in-path/moving-in-path.component';
 import { RecipesListingComponent } from './features/recipes/recipes-listing/recipes-listing.component';
+import { RecipeItemComponent } from './features/recipes/recipes-item/recipe-item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RecipesListingComponent } from './features/recipes/recipes-listing/reci
     BasicSliderComponent,
     HomeComponent,
     MovingInPathComponent,
-    RecipesListingComponent
+    RecipesListingComponent,
+    RecipeItemComponent
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@ export class RecipeService {
         description: 'Egyption tradtional food',
         createdBy: 'Sarah Refaat',
         rate: 4,
-        image: '../../../assets/images/recipes/pasta.jpg',
+        image: '../../../assets/images/recipes/koshari1.jpg',
         category: { id: 2, name: 'main dishes' },
         ingredients: ['2 cups of rice', '5 medium tomatos', '150g pasta', '5 medium onions', '350g lentil',],
         steps: ['jojojlkjlkjlkj', 'jkjkjkjkjkj', 'dsdsdsdsdsdsd'],
@@ -35,7 +35,7 @@ export class RecipeService {
           'Supermarket brands of ricotta contain stabilizers, which can give the cheese a gummy texture when baked. Check the label and choose ricotta made with as few ingredients as possible.',
         createdBy: 'Alex Williamns',
         rate: 4,
-        image: '',
+        image: '../../../assets/images/recipes/pasta.jpg',
         category: { id: 2, name: 'main dishes' },
         ingredients: ['1 pound fresh prepared pizza dough', '6 ounces shredded mozzarella cheese',
           '3/4 cup of ricotta cheese', '1 large egg yolk', '1/2 teaspoon lemon zest', '2 finely grated garlic cloves'

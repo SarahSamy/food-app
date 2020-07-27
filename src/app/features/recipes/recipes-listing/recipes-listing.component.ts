@@ -12,6 +12,9 @@ export class RecipesListingComponent implements OnInit {
   recipeService: RecipeService;
   constructor(r: RecipeService) {
     this.recipeService = r;
+    if (!this.recipes) {
+      this.recipes = this.recipeService.getAll();
+    }
   }
 
   ngOnInit() {
