@@ -8,6 +8,7 @@ import { MainHeaderComponent } from './core/header/main-header/main-header.compo
 import { PrimaryButtonComponent } from './features/inputs/primary-button/primary-button.component';
 import { BasicSliderComponent } from './shared/basic-slider/basic-slider.component';
 import { HomeComponent } from './features/pages/home/home.component';
+import { MovingInPathComponent } from './features/animation/moving-in-path/moving-in-path.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HomeComponent } from './features/pages/home/home.component';
     MainHeaderComponent,
     PrimaryButtonComponent,
     BasicSliderComponent,
-    HomeComponent
+    HomeComponent,
+    MovingInPathComponent
   ],
   imports: [
     BrowserModule,
