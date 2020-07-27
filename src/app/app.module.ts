@@ -9,6 +9,7 @@ import { PrimaryButtonComponent } from './features/inputs/primary-button/primary
 import { BasicSliderComponent } from './shared/basic-slider/basic-slider.component';
 import { HomeComponent } from './features/pages/home/home.component';
 import { MovingInPathComponent } from './features/animation/moving-in-path/moving-in-path.component';
+import { RecipesListingComponent } from './features/recipes/recipes-listing/recipes-listing.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MovingInPathComponent } from './features/animation/moving-in-path/movin
     PrimaryButtonComponent,
     BasicSliderComponent,
     HomeComponent,
-    MovingInPathComponent
+    MovingInPathComponent,
+    RecipesListingComponent
   ],
   imports: [
     BrowserModule,
