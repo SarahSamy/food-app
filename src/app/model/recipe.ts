@@ -1,25 +1,24 @@
-import { Category } from '../model/category';
-import { Time } from '../model/time';
-import { Tag } from '../model/tag';
-import { BloggerComment } from '../model/bloggerComment';
+import Category from '../model/category';
+import Time from '../model/time';
+import BloggerComment from '../model/bloggerComment';
 
-export interface Recipe {
+export default interface Recipe {
     id: number;
     name: string;
     description: string;
-    createdBy: string;
+    author: string;
     rate: number;
     image?: string;
-    category?: Category;
+    category: Category;
     ingredients: string[];
     steps: string[];
     time: Time;
     yield: number;
-    tags: Tag[];
+    tags: string[];
     comments: BloggerComment[];
-    createdAt: string;
-    favourite: boolean;
+    createdAt: Date;
+    favorite: boolean;
     views?: number;
     isDeleted?: boolean;
-
 }
+

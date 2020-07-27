@@ -1,4 +1,4 @@
-export interface Time {
-    activeTime: string;
-    totalTime: string;
+export default interface Time {
+    active: number;
+    total: number;
 }
