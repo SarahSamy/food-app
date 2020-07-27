@@ -15,7 +15,7 @@ export class RecipeService {
         description: 'Egyption tradtional food',
         createdBy: 'Sarah Refaat',
         rate: 4,
-        image: '',
+        image: '../../../assets/images/recipes/pasta.jpg',
         category: { id: 2, name: 'main dishes' },
         ingredients: ['2 cups of rice', '5 medium tomatos', '150g pasta', '5 medium onions', '350g lentil',],
         steps: ['jojojlkjlkjlkj', 'jkjkjkjkjkj', 'dsdsdsdsdsdsd'],
@@ -52,5 +52,34 @@ export class RecipeService {
         isDeleted: false,
       }
     ];
+  }
+
+  getAll(): Recipe[] {
+    return this.data;
+  }
+
+  getById(id: number): Recipe {
+    return this.data.find(recipe => recipe.id === id);
+  }
+  addRecipe(recipe: Recipe) {
+    recipe.id = this.data.length + 1;
+    this.data.push(recipe);
+  }
+  update(recipe: Recipe) {
+    const i = this.data.findIndex(r => r.id === recipe.id);
+    this.data[i] = recipe;
+  }
+  delete(id: number) {
+    const i = this.data.find(r => r.id === id);
+    i.isDeleted = true;
+
+  }
+
+  getByCategory(categoryId: number): Recipe[] {
+    return this.data.filter(r => r.category.id === categoryId);
+  }
+
+  getMostViews() {
+    return this.data.filter(p => p.views > 3);
   }
 }
