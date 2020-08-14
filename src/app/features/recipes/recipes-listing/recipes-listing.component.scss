@@ -1,0 +1,68 @@
+.masonry {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 800px;
+    // margin-left: -8px; /* Adjustment for the gutter */
+    width: 100%;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .item {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    text-align: center;
+    height: max-content;
+    
+  }
+  
+  .item img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 1500px) {
+    .item {
+      -ms-flex: 33%;
+      flex: 33%;
+      max-width: 33%;
+    }
+    .masonry{
+        column-count: 4;
+    }
+  }
+  @media screen and (max-width: 1300px){
+    .item {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+    .masonry{
+        column-count: 3;
+    }
+  }
+  @media screen and (max-width: 1164px) and (min-width: 620px) {
+
+    .masonry{
+     
+        column-count:2 ;
+        max-height: 1204px;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 619px) {
+    .item {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+    .masonry{
+        column-count:1 ;
+        max-height: 100%;
+    }
+  }
+

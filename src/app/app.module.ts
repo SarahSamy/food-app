@@ -11,6 +11,8 @@ import { HomeComponent } from './features/pages/home/home.component';
 import { MovingInPathComponent } from './features/animation/moving-in-path/moving-in-path.component';
 import { RecipesListingComponent } from './features/recipes/recipes-listing/recipes-listing.component';
 import { RecipeItemComponent } from './features/recipes/recipes-item/recipe-item.component';
+import { PageNotFoundComponent } from './features/pages/page-not-found/page-not-found.component';
+import { RecipesComponent } from './features/pages/recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { RecipeItemComponent } from './features/recipes/recipes-item/recipe-item
     HomeComponent,
     MovingInPathComponent,
     RecipesListingComponent,
-    RecipeItemComponent
+    RecipeItemComponent,
+    PageNotFoundComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
