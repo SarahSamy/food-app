@@ -1,11 +1,16 @@
 .card_img{
-    width: 25.5rem !important;
+    // height: 25.5rem !important;
     border-radius: 5rem;
     background-size:  cover;
+    // background-position: center;
+    height:20rem;
+     background-position: center;
+     background-attachment: fixed;
 }
 .card_data{
     text-align: center;
 }
 .card_cont{
     margin:0.5rem;
+    // width: 25.5rem !important;
 }

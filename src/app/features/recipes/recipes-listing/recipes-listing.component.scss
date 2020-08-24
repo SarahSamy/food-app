@@ -1,9 +1,10 @@
 .masonry {
     display: flex;
     flex-flow: column wrap;
-    max-height: 800px;
+    max-height: 800px;//1185px
     // margin-left: -8px; /* Adjustment for the gutter */
     width: 100%;
+    align-content: space-between;
   }
   
   /* Create four equal columns that sits next to each other */
@@ -65,4 +66,16 @@
         max-height: 100%;
     }
   }
+
+//   .item:nth-of-type(4n+1) { order: 1; }
+//   .item:nth-of-type(4n+2) { order: 2; }
+//   .item:nth-of-type(4n+3) { order: 3; }
+//   .item:nth-of-type(4n)   { order: 4; }
+
+//   /* Force new columns */
+// .break {
+//   flex-basis: 100%;
+//   width: 0;
+//   margin: 0;
+// }
 

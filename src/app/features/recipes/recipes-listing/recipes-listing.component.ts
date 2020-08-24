@@ -9,10 +9,11 @@ import { RecipeService } from 'src/app/services/recipe/recipe.service';
 })
 export class RecipesListingComponent implements OnInit {
   @Input() recipes: Recipe[];
-  constructor(private recipeService: RecipeService) { 
+  // = this.recipeService.selectedCategoryRecipes;
+  constructor(private recipeService: RecipeService) {
     // https://github.com/EvanHahn/HumanizeDuration.js
     this.recipes = this.recipeService.getAll();
-   }
+  }
 
   ngOnInit() {
   }

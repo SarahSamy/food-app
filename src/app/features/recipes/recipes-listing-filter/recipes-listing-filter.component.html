@@ -1,0 +1,97 @@
+<h2 class="title">Recipes</h2>
+<ul *ngFor=" let filter of listingData;index as i" class="filter-list">
+    <li (click)="toggle(i)">
+        <!-- (onClick)="openFilter.next()" -->
+        <a>{{filter.filterBy}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class='fas fa-plus' *ngIf="!filter.open" style="float: right;"></i>
+        <i class='fas fa-minus' *ngIf="filter.open" style="float: right;"></i>
+        <div *ngIf="filter.filterList && filter.open">
+            <ul *ngFor="let item of filter.filterList " class="filter-list">
+                <li (click)="openList(item)" (click)="openFilter.next()">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+
+    </li>
+</ul>
+
+
+
+
+
+
+<!-- (onClick)="openFilter.next()" -->
+<!-- <ul>
+    <li>
+        <a>Dish Type</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-plus'
+            (onClick)="openList()"></i>
+        <i class='fas fa-minus' *ngIf="opened"></i>
+        <ul>
+            <li> Appetizers & Snacks</li>
+            <li>Bread Recipes</li>
+            <li>Cake Recipes</li>
+            <li>Candy and Fudge</li>
+            <li>Casserole Recipes</li>
+            <li>Cocktail Recipes</li>
+            <li>Main Dishes
+            </li>
+            <li>Pasta Recipes</li>
+            <li> Pie Recipes </li>
+            <li> Sandwiches </li>
+        </ul>
+    </li>
+    <li>
+        <a>Meal Type</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-plus'
+            (onClick)="openList()"></i>
+        <i class='fas fa-minus' *ngIf="opened"></i>
+        <ul>
+            <li>Breakfast and Brunch</li>
+            <li> Desserts</li>
+            <li> Dinners </li>
+            <li> Lunch</li>
+        </ul>
+    </li>
+    <li>
+        <a>
+            Diet and Health
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class='fas fa-plus' (onClick)="openList()"></i>
+        <i class='fas fa-minus' *ngIf="opened"></i>
+        <ul>
+            <li>Diabetic</li>
+            <li>Gluten Free</li>
+            <li>High Fiber Recipes</li>
+            <li>Low Calorie</li>
+        </ul>
+    </li>
+    <li>
+        <a>
+            World Cuisine
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class='fas fa-plus' (onClick)="openList()"></i>
+        <i class='fas fa-minus' *ngIf="opened"></i>
+        <ul *ngIf="opened">
+            <li>Chinese </li>
+            <li>Indian </li>
+            <li>Italian </li>
+            <li>Mexican </li>
+        </ul>
+    </li>
+    <li>
+        <a>
+            Seasonal
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <ul>
+
+            <li> Baby Shower </li>
+            <li> Birthday </li>
+            <li> El Fetr Feast</li>
+            <li> El Adha Feast </li>
+        </ul>
+    </li>
+
+</ul> -->
