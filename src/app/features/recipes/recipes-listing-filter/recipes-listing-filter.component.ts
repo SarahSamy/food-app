@@ -15,6 +15,13 @@ export class RecipesListingFilterComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  closeOtherFilters(index: number) {
+    this.listingData
+      .filter((item, i) => i !== index)
+      .forEach(item => item.open = false);
+  }
+
   openList(itemCat: string) {
     this.openFilter.emit(itemCat);
     console.log(itemCat);
@@ -26,8 +33,7 @@ export class RecipesListingFilterComponent implements OnInit {
   }
   toggle(index) {
     const currentItem = this.listingData[index];
-    this.listingData.forEach(i => i.open = false);
     currentItem.open = !currentItem.open;
-
+    this.closeOtherFilters(index);
   }
 }
