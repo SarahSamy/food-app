@@ -22,15 +22,6 @@ export class RecipesListingFilterComponent implements OnInit {
       .forEach(item => item.open = false);
   }
 
-  openList(itemCat: string) {
-    this.openFilter.emit(itemCat);
-    console.log(itemCat);
-    this.recipeService.selectedCategory = itemCat;
-    // console.log(itemsByCat);
-    // this.recipeService.data = itemsByCat;
-    // this.opened = true;
-
-  }
   toggle(index) {
     const currentItem = this.listingData[index];
     currentItem.open = !currentItem.open;

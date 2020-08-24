@@ -8,9 +8,6 @@ import data from '../../data/recipes-listing-filter';
 })
 export class RecipeService {
   data: Recipe[] = recipes;
-  selectedCategoryRecipes: Recipe[] = recipes;
-  @Input() listingData = data;
-  selectedCategory = '';
   constructor() { }
 
   getAll(): Recipe[] {
@@ -37,8 +34,7 @@ export class RecipeService {
     return this.data.filter(r => r.category.id === categoryId);
   }
   getByCategoryName(catName: string) {
-    const selectedCategoryRecipes = recipes.filter(r => r.category.name === catName);
-    return selectedCategoryRecipes;
+    return recipes.filter(r => r.category.name === catName);
   }
 
   getMostViews(views = 3) {

@@ -2,11 +2,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
-            <app-recipes-listing-filter (openFilter)="getFilterList()">
-
+            <app-recipes-listing-filter (openFilter)="getFilterList($event)">
             </app-recipes-listing-filter>
-            <!-- filter -->
-
         </div>
         <div class="col-md-9">
             <app-recipes-listing [recipes]="recipes"></app-recipes-listing>
