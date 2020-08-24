@@ -3,14 +3,23 @@
     border-radius: 5rem;
     background-size:  cover;
     // background-position: center;
-    height:20rem;
+    width: auto;
+  height: 20rem;
      background-position: center;
      background-attachment: fixed;
+    
 }
 .card_data{
     text-align: center;
+    // position:absolute
+    // max-width:20rem;
+    padding: 0px 20%;
 }
 .card_cont{
-    margin:0.5rem;
+    margin:0.7rem;
+    text-align: center;
+    position:relative;
     // width: 25.5rem !important;
+
+
 }
