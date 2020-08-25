@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import data from '../../../data/recipes-listing-filter';
 import { RecipeService } from 'src/app/services/recipe/recipe.service';
+import Recipe from 'src/app/model/recipe';
 @Component({
   selector: 'app-recipes-listing-filter',
   templateUrl: './recipes-listing-filter.component.html',
@@ -8,6 +9,7 @@ import { RecipeService } from 'src/app/services/recipe/recipe.service';
 })
 export class RecipesListingFilterComponent implements OnInit {
   listingData: any[] = data;
+  recipes: Recipe[] = this.recipeService.getAll();
   opened = false;
   @Output() openFilter = new EventEmitter<string>();
 
@@ -19,10 +21,6 @@ export class RecipesListingFilterComponent implements OnInit {
     this.openFilter.emit(itemCat);
     console.log(itemCat);
     this.recipeService.selectedCategory = itemCat;
-    // console.log(itemsByCat);
-    // this.recipeService.data = itemsByCat;
-    // this.opened = true;
-
   }
   toggle(index) {
     const currentItem = this.listingData[index];
@@ -30,4 +28,5 @@ export class RecipesListingFilterComponent implements OnInit {
     currentItem.open = !currentItem.open;
 
   }
+
 }
