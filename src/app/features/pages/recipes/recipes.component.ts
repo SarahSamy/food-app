@@ -13,8 +13,8 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit() {
   }
-  getFilterList() {
-    this.recipes = this.recipeService.getByCategoryName(this.recipeService.selectedCategory);
+  getFilterList(selectedCategory: string) {
+    this.recipes = this.recipeService.getByCategoryName(selectedCategory);
   }
 
 }

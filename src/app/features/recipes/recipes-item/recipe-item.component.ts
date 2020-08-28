@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import Recipe from 'src/app/model/recipe';
+import { RecipeService } from 'src/app/services/recipe/recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -8,9 +9,12 @@ import Recipe from 'src/app/model/recipe';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
   }
-
+  toggleFavorite(id: number) {
+    // event.target.addEventListenerfavorite=! event.favorite;
+    this.recipeService.toggleFavorite(id);
+  }
 }

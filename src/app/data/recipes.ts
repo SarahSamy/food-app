@@ -226,7 +226,7 @@ const recipes = [
         isDeleted: false,
     },
     {
-        id: 8,
+        id: 12,
         name: 'Candy Corn Fudge',
         description: 'Here are satisfying vegan munchies that replicate the flavors of tailgating favorite Buffalo wings.',
         author: 'Sarah Refaat',
@@ -245,7 +245,7 @@ const recipes = [
         isDeleted: false,
     },
     {
-        id: 9,
+        id: 13,
         name: 'cake',
         description: 'Egyption tradtional food',
         author: 'Sarah Refaat',
@@ -264,7 +264,7 @@ const recipes = [
         isDeleted: false,
     },
     {
-        id: 10,
+        id: 14,
         name: 'Stuffed Peppers',
         description: 'Egyption tradtional food',
         author: 'Sarah Refaat',
@@ -283,7 +283,7 @@ const recipes = [
         isDeleted: false,
     },
     {
-        id: 11,
+        id: 15,
         name: 'cake',
         description: 'Egyption tradtional food',
         author: 'Sarah Refaat',
@@ -302,7 +302,7 @@ const recipes = [
         isDeleted: false,
     },
     {
-        id: 12,
+        id: 16,
         name: 'Chicken Teriyaki',
         description: 'Egyption tradtional food',
         author: 'Sarah Refaat',
@@ -321,7 +321,7 @@ const recipes = [
         isDeleted: false,
     },
     {
-        id: 12,
+        id: 17,
         name: 'Pasta Parmesan with Zucchini, Tuscan Herbs & Marinara Sauce',
         description: 'Egyption tradtional food',
         author: 'Sarah Refaat',
