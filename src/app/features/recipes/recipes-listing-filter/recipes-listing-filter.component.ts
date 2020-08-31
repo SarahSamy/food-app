@@ -9,7 +9,9 @@ import Recipe from 'src/app/model/recipe';
 })
 export class RecipesListingFilterComponent implements OnInit {
   listingData: any[] = data;
-  recipes: Recipe[] = this.recipeService.getAll();
+  recipes: Recipe[];
+  selected: any;
+  // = this.recipeService.getAll();
   opened = false;
   @Output() openFilter = new EventEmitter<string>();
 
@@ -30,4 +32,10 @@ export class RecipesListingFilterComponent implements OnInit {
     this.closeOtherFilters(index);
   }
 
+  select(item) {
+    this.selected = item;
+  }
+  isActive(item) {
+    return this.selected === item;
+  }
 }

@@ -1,7 +1,9 @@
 <div class="card_cont card     text-overflow: ellipsis;">
     <div class="card_img_cont">
-        <i class="fa fa-heart" aria-hidden="true" (click)="toggleFavorite(recipe.id)"
-            [ngClass]="{'isFav':recipe.favorite,'isNotFav':!recipe.favorite}"></i>
+        <div class="fav_cont">
+            <i class="fa fa-heart" aria-hidden="true" (click)="toggleFavorite(recipe.id)"
+                [ngClass]="{'isFav':recipe.favorite,'isNotFav':!recipe.favorite}"></i>
+        </div>
         <img class="card_img "
             src=" {{ recipe.image ? recipe.image : '../../../../assets/images/recipes/notfound.jpg'}} "
             alt="recipe Title">

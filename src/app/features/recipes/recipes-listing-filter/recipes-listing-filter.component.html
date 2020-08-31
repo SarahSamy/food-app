@@ -1,15 +1,17 @@
 <h2 class="title" (click)="getAll()">Recipes</h2>
 <ul *ngFor=" let filter of listingData;index as i" class="filter-list">
-    <li >
+    <li>
         <div (click)="toggle(i)">
-            <a>{{filter.filterBy}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a>{{filter.filterBy}}</a>
+            <!-- &nbsp; -->
             <i class='fas fa-plus' *ngIf="!filter.open" style="float: right;"></i>
             <i class='fas fa-minus' *ngIf="filter.open" style="float: right;"></i>
         </div>
         <div *ngIf="filter.filterList && filter.open">
             <ul *ngFor="let item of filter.filterList " class="filter-list">
-                <li (click)="openFilter.emit(item)">
-                    {{item}}
+                <li (click)="openFilter.emit(item)" class="filter-list__item" (click)="select(item)"
+                    [ngClass]="{active: isActive(item)}">
+                    <a> {{item}}</a>
                 </li>
             </ul>
         </div>
