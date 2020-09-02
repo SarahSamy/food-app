@@ -9,7 +9,9 @@
             alt="recipe Title">
     </div>
     <div class="card_data card-body">
-        <h4 class="card_title">{{ recipe.name }}</h4>
+        <a [routerLink]="['/recipe', recipe.id,'details']">
+            <h4 class="card_title">{{ recipe.name }}</h4>
+        </a>
         <div class="card_text">
             <span> <i class="fa fa-star" aria-hidden="true"
                     style="color:#ffd43b; float: left;padding-right: 0.5rem;"></i></span>

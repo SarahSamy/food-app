@@ -14,6 +14,7 @@ import { RecipeItemComponent } from './features/recipes/recipes-item/recipe-item
 import { PageNotFoundComponent } from './features/pages/page-not-found/page-not-found.component';
 import { RecipesComponent } from './features/pages/recipes/recipes.component';
 import { RecipesListingFilterComponent } from './features/recipes/recipes-listing-filter/recipes-listing-filter.component';
+import { RecipeDetailsComponent } from './features/pages/recipes/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RecipesListingFilterComponent } from './features/recipes/recipes-listin
     RecipeItemComponent,
     PageNotFoundComponent,
     RecipesComponent,
-    RecipesListingFilterComponent
+    RecipesListingFilterComponent,
+    RecipeDetailsComponent
   ],
   imports: [
     BrowserModule,

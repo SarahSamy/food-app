@@ -1,0 +1,56 @@
+<main-header></main-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 pr-2 ">
+            <div class="item__image__cont"><img
+                    src="{{ recipe.image ? recipe.image : '../../../../assets/images/recipes/notfound.jpg'}} "
+                    alt="{{recipe.name}}" class="item__image img-responsive full-width"></div>
+        </div>
+        <div class="col-md-6 col-sm-12 pl-5 card-details">
+            <h1 class="my-5">
+                {{recipe.name}}
+            </h1>
+            <p>
+                {{recipe.description}}
+            </p>
+            <div class="container">
+                <div class="row my-5" style="text-align: center;">
+                    <div class="col-md-4 col-sm-4 pr-5 time-cont">
+                        <img src="../../../../../assets/images/reipe/time.svg " alt="{{recipe.time.active}}"
+                            width="30rem">
+                        <p class="mt-2">
+                            Active Time
+                        </p>
+                        <p class="m-0">
+                            {{ recipe.time.active}} mins
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 time-cont">
+                        <img src="../../../../../assets/images/reipe/watch.svg " alt="{{recipe.time.total}}"
+                            width="30rem">
+                        <p class="mt-2">
+                            Total Time
+                        </p>
+                        <p class="m-0">
+                            {{ recipe.time.total}} mins
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <img src="../../../../../assets/images/reipe/person.svg " alt="yield" width="30rem">
+                        <p class="mt-2">
+                            Yield
+                        </p>
+                        <p class="m-0">
+                            Serves {{ recipe.yield}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-card-footer">
+                <p class="mt-4">
+                    Created by {{recipe.author}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
