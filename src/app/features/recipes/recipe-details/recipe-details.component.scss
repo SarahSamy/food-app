@@ -1,4 +1,4 @@
-@import '../../../../sass/abstracts/variables';
+@import '../../../../app/sass/abstracts/variables';
 
 .item__image__cont {
     position: relative;
@@ -31,6 +31,51 @@
 }
 .card-details{
     align-self: center;
+}
+.recipe_steps{
+margin-top: 5rem;
+padding: 0rem 8rem;
+&__title{
+  font-weight: bold;
+  margin-bottom: 3rem;
+  margin-right: 5rem;
+}
+&__list{
+  color: $color-orange-primary;
+  font-size: 1.7rem;
+  // border-bottom: 1px solid $color-gray; 
+  //  line-height: 0.1em;
+  &_item{
+      padding-left: 6rem !important;
+  }
+&::after{
+  content: "";
+  position: absolute;
+  height: 14px;
+  border-bottom: 1px solid $color-gray;
+  width:75%;
+  // left: 100%;
+  margin-left: 15px;
+}
+
+}
+&__icon{
+  font-size: 1.7rem;
+  color: $color-orange-primary;
+  margin:0rem 2rem;
+  &:hover{
+    background-color: $color-orange-primary;
+    border-color: $color-orange-primary;
+    color: white;
+    border-radius: 50%;
+  }
+}
+}
+.recipe_ingredient {
+&__list_item{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $color-gray;
+}
 }
 // @media only screen and (max-width: 767px) {
 //     .time-cont{

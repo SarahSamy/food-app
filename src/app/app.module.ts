@@ -12,9 +12,10 @@ import { MovingInPathComponent } from './features/animation/moving-in-path/movin
 import { RecipesListingComponent } from './features/recipes/recipes-listing/recipes-listing.component';
 import { RecipeItemComponent } from './features/recipes/recipes-item/recipe-item.component';
 import { PageNotFoundComponent } from './features/pages/page-not-found/page-not-found.component';
-import { RecipesComponent } from './features/pages/recipes/recipes.component';
+import { RecipesComponent } from './features/pages/recipes/recipes-listing-by-filter/recipes.component';
 import { RecipesListingFilterComponent } from './features/recipes/recipes-listing-filter/recipes-listing-filter.component';
-import { RecipeDetailsComponent } from './features/pages/recipes/recipe-details/recipe-details.component';
+import { RecipeDetailsPageComponent } from './features/pages/recipes/recipe-details/recipe-details-page.component';
+import { RecipeDetailsComponent } from './features/recipes/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RecipeDetailsComponent } from './features/pages/recipes/recipe-details/
     PageNotFoundComponent,
     RecipesComponent,
     RecipesListingFilterComponent,
-    RecipeDetailsComponent
+    RecipeDetailsComponent,
+    RecipeDetailsPageComponent
   ],
   imports: [
     BrowserModule,

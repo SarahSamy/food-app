@@ -1,0 +1,20 @@
+<main-header></main-header>
+<div class="container-fluid">
+    <div class="row px-5 ">
+        <div class="col-md-3 col-sm-12">
+            <app-recipes-listing-filter (openFilter)="getFilterList($event)">
+            </app-recipes-listing-filter>
+        </div>
+        <div class="col-md-9 col-sm-12 mx-auto">
+            <ng-container *ngIf="recipes.length!=0;else noItems">
+                <app-recipes-listing [recipes]="recipes"></app-recipes-listing>
+            </ng-container>
+            <ng-template #noItems>
+                <ng-container>
+                    <p style=" text-align: center;padding-top: 21rem"> No items to show</p>
+                </ng-container>
+            </ng-template>
+
+        </div>
+    </div>
+</div>

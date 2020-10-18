@@ -1,4 +1,3 @@
-<main-header></main-header>
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-sm-12 pr-2 ">
@@ -50,6 +49,27 @@
                 <p class="mt-4">
                     Created by {{recipe.author}}
                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--      How to Make It & Ingredients      -->
+<div class="container recipe_steps">
+    <div class="row my-5">
+        <div class="col-md-7">
+            <h2 class="recipe_steps__title">How to Make It</h2>
+            <div *ngFor="let step of recipe.steps ;index as i">
+                <i class="far fa-check-circle  recipe_steps__icon"></i>
+                <span class="recipe_steps__list">{{i+1}}. STEP</span>
+
+                <p class="recipe_steps__list_item ">{{step}}</p>
+            </div>
+
+        </div>
+        <div class="col-md-4 offset-md-1">
+            <h2 class="recipe_steps__title">Ingredients</h2>
+            <div *ngFor="let ingredient of recipe.ingredients ;index as i">
+                <p class="recipe_ingredient__list_item ">{{ingredient}}</p>
             </div>
         </div>
     </div>

@@ -4,11 +4,11 @@ import { RecipeService } from 'src/app/services/recipe/recipe.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-recipe-details',
-  templateUrl: './recipe-details.component.html',
-  styleUrls: ['./recipe-details.component.scss']
+  selector: 'app-recipe-details-page',
+  templateUrl: './recipe-details-page.component.html',
+  styleUrls: ['./recipe-details-page.component.scss']
 })
-export class RecipeDetailsComponent implements OnInit {
+export class RecipeDetailsPageComponent implements OnInit {
   recipe: Recipe;
   constructor(private recipeService: RecipeService, private route: ActivatedRoute, private router: Router) { }
 
