@@ -1,12 +1,13 @@
 <div class="container-fluid">
     <!-- <div class="row my-5">
         <div class="col-md-12"> -->
-    <div class="row ">
-        <div *ngFor="let recipe of recipes" class="column ">
+    <div class="row">
+        <div *ngFor="let recipe of recipes | paginate: { itemsPerPage: 9, currentPage: p }" class="column " >
             <app-recipe-item [recipe]="recipe"> </app-recipe-item>
 
         </div>
     </div>
     <!-- </div>
     </div> -->
+    <pagination-controls (pageChange)="p = $event"  autoHide="true" class="list-pagination" ></pagination-controls>
 </div>

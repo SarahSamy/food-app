@@ -1,3 +1,4 @@
+@import '../../../sass/abstracts/variables';
 .masonry {
     display: flex;
     flex-flow: column wrap;
@@ -22,6 +23,19 @@
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+  }
+
+   .list-pagination ::ng-deep .ngx-pagination {
+padding-left: 0px;
+margin-top: 2rem;
+text-align: center;
+      & .current {
+        background: $color-orange-primary;
+        border-radius: 2rem;
+      }
+      & a {
+        border-radius: 2rem;
+      }
   }
 
   /* Responsive layout - makes a two column-layout instead of four columns */

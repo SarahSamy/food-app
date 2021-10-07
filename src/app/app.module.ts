@@ -16,6 +16,7 @@ import { RecipesComponent } from './features/pages/recipes/recipes-listing-by-fi
 import { RecipesListingFilterComponent } from './features/recipes/recipes-listing-filter/recipes-listing-filter.component';
 import { RecipeDetailsPageComponent } from './features/pages/recipes/recipe-details/recipe-details-page.component';
 import { RecipeDetailsComponent } from './features/recipes/recipe-details/recipe-details.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RecipeDetailsComponent } from './features/recipes/recipe-details/recipe
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
