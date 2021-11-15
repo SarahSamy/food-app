@@ -1,18 +1,21 @@
 import { Injectable, Input } from '@angular/core';
 import Recipe from 'src/app/model/recipe';
 import recipes from '../../data/recipes';
-import { getLocaleDateFormat } from '@angular/common';
 import data from '../../data/recipes-listing-filter';
 import { Router } from '@angular/router';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
-  data: Recipe[] = recipes;
-  searchResult: Recipe[]=[];
+  private data: Recipe[] = recipes;
+  private searchResult: Recipe[]=[];
   searchResultChange: Subject<Recipe[]> = new Subject<Recipe[]>();
   constructor(public router: Router) { }
+
+  getSearchResult(): Recipe[] {
+    return this.searchResult;
+  }
 
   getAll(): Recipe[] {
     return this.data;
@@ -55,8 +58,8 @@ export class RecipeService {
     const pickedKeys = ["name", "description", "ingredients"];
     const matchedRecipes = recipes.filter((recipe) => {
       for (const key of pickedKeys) {
-        let SearchedString = Array.isArray(recipe[key]) ? recipe[key].join() : recipe[key];
-        if (SearchedString.toLowerCase().includes(searchText)) return true;
+        let SearchedString: string = Array.isArray(recipe[key]) ? recipe[key].join() : recipe[key];
+        if (SearchedString.toLowerCase().includes(searchText.toLowerCase())) return true;
       }
     });
     return matchedRecipes;
