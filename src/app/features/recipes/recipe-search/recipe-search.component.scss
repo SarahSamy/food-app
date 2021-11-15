@@ -1,0 +1,16 @@
+
+.search-input{
+   border-radius: 1.5rem;
+   border:none;
+   text-align: start;
+   background-color: gainsboro;
+   height: 3rem;
+   :focus {
+       outline-style: none;
+    }
+}
+.search-btn{
+    left:-25px;
+    position: relative;
+    
+}

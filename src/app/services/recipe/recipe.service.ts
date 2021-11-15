@@ -3,12 +3,16 @@ import Recipe from 'src/app/model/recipe';
 import recipes from '../../data/recipes';
 import { getLocaleDateFormat } from '@angular/common';
 import data from '../../data/recipes-listing-filter';
+import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
   data: Recipe[] = recipes;
-  constructor() { }
+  searchResult: Recipe[]=[];
+  searchResultChange: Subject<Recipe[]> = new Subject<Recipe[]>();
+  constructor(public router: Router) { }
 
   getAll(): Recipe[] {
     return this.data;
@@ -46,5 +50,23 @@ export class RecipeService {
   toggleFavorite(id: number) {
     const selectedItem = this.data.find(item => item.id === id);
     selectedItem.favorite = !selectedItem.favorite;
+  }
+  searchForRecipes(searchText: string) {
+    const pickedKeys = ["name", "description", "ingredients"];
+    const matchedRecipes = recipes.filter((recipe) => {
+      for (const key of pickedKeys) {
+        let SearchedString = Array.isArray(recipe[key]) ? recipe[key].join() : recipe[key];
+        if (SearchedString.toLowerCase().includes(searchText)) return true;
+      }
+    });
+    return matchedRecipes;
+  }
+  showSearchResult(searchText: string){
+    this.searchResult = this.searchForRecipes(searchText);
+    this.searchResultChange.next(this.searchResult);
+    this.goToSearchResult();
+  }
+  goToSearchResult() {
+    this.router.navigate(['/recipe-search-result']);
   }
 }

@@ -1,11 +1,9 @@
-<main-header ></main-header>
-<div class="container-fluid">
-    <div class="row px-5 ">
-        <div class="col-md-3 col-sm-12">
-            <app-recipes-listing-filter (openFilter)="getFilterList($event)">
-            </app-recipes-listing-filter>
-        </div>
-        <div class="col-md-9 col-sm-12 mx-auto">
+<!-- <app-recipe-search (searchForRecipes)="getRecipeBySearch($event)"></app-recipe-search> -->
+<!-- <main-header></main-header> -->
+<main-header></main-header>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
             <ng-container *ngIf="recipes.length!=0;else noItems">
                 <app-recipes-listing [recipes]="recipes"></app-recipes-listing>
             </ng-container>
@@ -17,4 +15,5 @@
 
         </div>
     </div>
+
 </div>

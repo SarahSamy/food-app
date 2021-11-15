@@ -7,7 +7,7 @@
             </span>
         </div>
 
-        <div class="col-md-5 col-sm-12">
+        <div class="col-md-8 col-sm-12">
             <ul class="horizontal-list ">
                 <li class="nav_item ">
                     <a routerLink="/home">Home</a>
@@ -16,15 +16,22 @@
                     <a routerLink="/recipes">Recipe</a>
                 </li>
                 <li class="nav_item ">
-                    <a href="#">Search</a>
-                </li>
-                <li class="nav_item ">
                     <a href="#">Contact</a>
                 </li>
+                <li class="nav_item ">
+                    <app-recipe-search (searchForRecipes)="getRecipeBySearch($event)" ></app-recipe-search>
+                    <!-- <a routerLink="/recipe-search-result">Search</a> -->
+                </li>
+               
+            
             </ul>
+            <!-- <app-recipe-search (searchForRecipe)="getRecipeBySearch($event)"></app-recipe-search> -->
+            <!-- <form>
+                <input type="search" placeholder="Recipe Search" aria-label="Search" (keyup.enter)="searchForRecipe()">
+            </form> -->
         </div>
 
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-2 col-sm-12">
             <!-- <div style="float: left;">Sign in</div> -->
             <primary-button style="float: right;"></primary-button>
         </div>

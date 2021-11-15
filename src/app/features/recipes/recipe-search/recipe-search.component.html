@@ -1,0 +1,6 @@
+<form (submit)="recipesSearch(searchText);">
+    <input class="search-input"  name="search" type="search" placeholder=" recipe search..." aria-label="Search" [(ngModel)]="searchText">
+    <span class="search-btn"  (click)="recipesSearch(searchText)"> <i class="fa fa-search"></i></span>
+    <!-- <button type="submit" class="search-btn" class="search-btn" ><i  class="fa fa-search"></i></button> -->
+</form>
+

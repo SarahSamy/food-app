@@ -9,6 +9,7 @@ import Recipe from 'src/app/model/recipe';
 })
 export class RecipesComponent implements OnInit {
   recipes: Recipe[] = this.recipeService.getAll();
+  
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
@@ -16,5 +17,5 @@ export class RecipesComponent implements OnInit {
   getFilterList(selectedCategory: string) {
     this.recipes = this.recipeService.getByCategoryName(selectedCategory);
   }
-
+ 
 }

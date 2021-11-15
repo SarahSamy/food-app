@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,9 @@ import { RecipesListingFilterComponent } from './features/recipes/recipes-listin
 import { RecipeDetailsPageComponent } from './features/pages/recipes/recipe-details/recipe-details-page.component';
 import { RecipeDetailsComponent } from './features/recipes/recipe-details/recipe-details.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SignUpComponent } from './features/sign-up/sign-up.component';
+import { RecipeSearchComponent } from './features/recipes/recipe-search/recipe-search.component';
+import { RecipesSearchResultComponent } from './features/pages/recipes/recipes-search-result/recipes-search-result.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +36,14 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RecipesComponent,
     RecipesListingFilterComponent,
     RecipeDetailsComponent,
-    RecipeDetailsPageComponent
+    RecipeDetailsPageComponent,
+    SignUpComponent,
+    RecipeSearchComponent,
+    RecipesSearchResultComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     MDBBootstrapModule,
     NgxPaginationModule
