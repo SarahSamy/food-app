@@ -1,9 +1,10 @@
-import { Injectable, Input } from '@angular/core';
-import Recipe from 'src/app/model/recipe';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
+import Recipe from '../../model/recipe';
 import recipes from '../../data/recipes';
 import data from '../../data/recipes-listing-filter';
-import { Router } from '@angular/router';
-import { Observable, Subject } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -72,4 +73,5 @@ export class RecipeService {
   goToSearchResult() {
     this.router.navigate(['/recipe-search-result']);
   }
+ 
 }

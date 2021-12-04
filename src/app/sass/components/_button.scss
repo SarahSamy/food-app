@@ -11,15 +11,16 @@
 
 &--primary {
     background-color: $color-orange-primary;
-    color: #fff;
+    // color: #fff;
     // border: 1px solid transparent;
     // border: 0.09rem solid $color-orange-primary;
     // border-radius: 5rem;
-    color: $color-white;
+    color: $color-white !important;
     transition: all 0.3s ease-in-out;
     &:hover{
         background-color: $color-orange-light;
         color: $color-white;
         
     }
+   
 }}

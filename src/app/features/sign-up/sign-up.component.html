@@ -1,1 +1,30 @@
-<p>sign-up works!</p>
+<!-- <ng-template #content let-c="close" let-d="dismiss"> -->
+
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">sign up!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<form #myForm="ngForm" (ngSubmit)="signUp()" >
+<div class="modal-body sign-up-body">
+
+    <label>username </label>
+    <input type="text" [(ngModel)]="user.firstName" required name="firstName">
+
+    <label>email</label>
+    <input type="text" [(ngModel)]="user.email" required name="email">
+
+    <label>confirm email</label>
+    <input type="text" [(ngModel)]="confirmedEmail" required name="confirmedEmail">
+
+    <label>password</label>
+    <input type="password" [(ngModel)]="user.password" required name="password">
+
+</div>
+<div class="modal-footer">
+    <button type="submit" [disabled]="!myForm.valid" class="btn btn-outline-dark">sign up</button>
+</div>
+</form>
+
+<!-- </ng-template> -->
